@@ -16,11 +16,15 @@ yes | pkg update -y
 # Install main stuff
 pkg install aria2 getconf git neofetch neovim openssh python python-pip termux-api zsh -y
 
+# Install yt-dlp (youtube-dl)
+pip install yt-dlp
+
 # Change default shell to zsh
 chsh -s zsh
 
-# Create a symbolic link for easy access to nvim
+# Create a symbolic link for easy access to nvim and yt-dlp
 ln -s $(where nvim) /data/data/com.termux/files/usr/bin/vim
+ln -s $(where yt-dlp) /data/data/com.termux/files/usr/bin/youtube-dl
 
 # Remove nano
 yes | pkg remove nano
