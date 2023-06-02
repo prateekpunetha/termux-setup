@@ -19,6 +19,9 @@ pkg install aria2 getconf git neofetch neovim openssh python python-pip termux-a
 # Change default shell to zsh
 chsh -s zsh
 
+# Create a symbolic link for easy access to nvim
+ln -s $(where nvim) /data/data/com.termux/files/usr/bin/vim
+
 # Remove nano
 yes | pkg remove nano
 
