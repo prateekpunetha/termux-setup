@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-color_scheme_url="https://raw.githubusercontent.com/prateekpunetha/termux-setup/main/colors/colors.properties"
+color_scheme_url="https://github.com/prateekpunetha/termux-setup/raw/main/colors/colors.properties"
 font_url="https://github.com/prateekpunetha/termux-setup/raw/main/fonts/font.ttf"
 starship_config_url="https://github.com/prateekpunetha/termux-setup/raw/main/config_files/starship/config.toml"
 termux_dir="/data/data/com.termux/files/home/.termux"
@@ -27,7 +27,7 @@ chsh -s zsh
 echo "eval \$(starship init zsh)" >> $HOME/.zshrc
 
 mkdir -p $HOME/.config
-curl -so $HOME/.config/starship.toml "$starship_config_url"
+curl -sSL -o $HOME/.config/starship.toml "$starship_config_url"
 
 # Create a symbolic link for easy access to nvim and yt-dlp
 ln -s $(which nvim) /data/data/com.termux/files/usr/bin/vim
@@ -38,8 +38,8 @@ yes | pkg remove nano
 
 # Setup color scheme
 echo "Installing color schemes..."
-curl -so  "$termux_dir/colors.properties" "$color_scheme_url"
+curl -sSL -o  "$termux_dir/colors.properties" "$color_scheme_url"
 
 # Install font
 echo "Installing NERD Fonts..."
-curl -so "$termux_dir/font.ttf" "$font_url"
+curl -sSL -o "$termux_dir/font.ttf" "$font_url"
