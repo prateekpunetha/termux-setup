@@ -3,9 +3,9 @@
 color_scheme_url="https://github.com/prateekpunetha/termux-setup/raw/main/colors/colors.properties"
 font_url="https://github.com/prateekpunetha/termux-setup/raw/main/fonts/font.ttf"
 starship_config_url="https://github.com/prateekpunetha/termux-setup/raw/main/config_files/starship/config.toml"
-termux_dir="/data/data/com.termux/files/home/.termux"
+termux_dir="$HOME/.termux"
 
-# termux update repos
+# Termux update repos
 termux-change-repo
 
 # Setup termux storage
@@ -30,8 +30,8 @@ mkdir -p $HOME/.config
 curl -sSL -o $HOME/.config/starship.toml "$starship_config_url"
 
 # Create a symbolic link for easy access to nvim and yt-dlp
-ln -s $(which nvim) /data/data/com.termux/files/usr/bin/vim
-ln -s $(which yt-dlp) /data/data/com.termux/files/usr/bin/youtube-dl
+ln -s $(which nvim) $PREFIX/bin/vim
+ln -s $(which yt-dlp) $PREFIX/bin/youtube-dl
 
 # Remove nano
 yes | pkg remove nano
