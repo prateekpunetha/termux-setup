@@ -27,7 +27,7 @@ chsh -s zsh
 echo "eval \$(starship init zsh)" >> $HOME/.zshrc
 
 mkdir -p $HOME/.config
-curl -so $HOME/.config/ "$starship_config_url"
+curl -so $HOME/.config/starship.toml "$starship_config_url"
 
 # Create a symbolic link for easy access to nvim and yt-dlp
 ln -s $(which nvim) /data/data/com.termux/files/usr/bin/vim
