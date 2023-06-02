@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-color_scheme_url="https://dl.prateekpunetha.dev/colors.properties"
-font_url="https://dl.prateekpunetha.dev/font.ttf"
+color_scheme_url="https://raw.githubusercontent.com/prateekpunetha/termux-setup/main/colors/colors.properties"
+font_url="https://github.com/prateekpunetha/termux-setup/raw/main/fonts/font.ttf"
 termux_dir="/data/data/com.termux/files/home/.termux"
 
 # termux update repos
