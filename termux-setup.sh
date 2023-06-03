@@ -15,7 +15,7 @@ termux-setup-storage
 yes | pkg update -y
 
 # Install main stuff
-pkg install aria2 bat ffmpeg getconf git neofetch neovim openssh python python-pip starship termux-api which zsh -y
+pkg install aria2 bat ffmpeg git neofetch neovim openssh python python-pip starship termux-api which zsh -y
 
 # Install yt-dlp (youtube-dl)
 pip install yt-dlp
