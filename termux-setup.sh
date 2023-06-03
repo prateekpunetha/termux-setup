@@ -15,7 +15,7 @@ termux-setup-storage
 yes | pkg update -y
 
 # Install main stuff
-pkg install aria2 ffmpeg getconf git neofetch neovim openssh python python-pip starship termux-api which zsh -y
+pkg install aria2 bat ffmpeg getconf git neofetch neovim openssh python python-pip starship termux-api which zsh -y
 
 # Install yt-dlp (youtube-dl)
 pip install yt-dlp
@@ -32,6 +32,9 @@ curl -sSL -o $HOME/.config/starship.toml "$starship_config_url"
 # Create a symbolic link for easy access to nvim and yt-dlp
 ln -s $(which nvim) $PREFIX/bin/vim
 ln -s $(which yt-dlp) $PREFIX/bin/youtube-dl
+
+# Set some aliases
+echo "alias cat=\"bat --style=grid,header\"" >> ~/.zshrc
 
 # Remove nano
 yes | pkg remove nano
