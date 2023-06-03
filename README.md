@@ -21,3 +21,7 @@ termux-setup is a handy tool that automates the process of setting up Termux env
 curl -LO https://github.com/prateekpunetha/termux-setup/raw/main/termux-setup.sh
 bash termux-setup.sh
 ```
+
+## Screenshot
+
+![Termux](https://github.com/prateekpunetha/termux-setup/assets/45706694/811faf1f-fdfd-4b86-827d-b60290edef2a)
