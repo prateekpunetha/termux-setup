@@ -35,6 +35,7 @@ ln -s $(which yt-dlp) $PREFIX/bin/youtube-dl
 
 # Set some aliases
 echo "alias cat=\"bat --style=grid,header\"" >> ~/.zshrc
+echo "alias yt-dlp=\"yt-dlp -o '%(title)s.%(ext)s' --external-downloader aria2c --external-downloader-args '-c -j 4 -x 8 -s 8 -k 1M'\"" >> ~/.zshrc
 
 # Remove nano
 yes | pkg remove nano
