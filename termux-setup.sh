@@ -12,7 +12,7 @@ termux-change-repo
 termux-setup-storage
 
 # Update packages
-yes | pkg update -y
+yes | pkg update && pkg upgrade
 
 # Install main stuff
 pkg install aria2 bat ffmpeg git fastfetch neovim openssh python python-pip starship termux-api which zsh -y
@@ -47,3 +47,6 @@ curl -sSL -o  "$termux_dir/colors.properties" "$color_scheme_url"
 # Install font
 echo "Installing NERD Fonts..."
 curl -sSL -o "$termux_dir/font.ttf" "$font_url"
+
+# Done
+echo '\nDone!'
